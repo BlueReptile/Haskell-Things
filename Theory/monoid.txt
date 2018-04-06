@@ -1,0 +1,39 @@
+Monoids
+
+
+Um tipo(conjunto) m
+munido de uma operação (<>):: m -> m -> m
+e um elemento chamado elemento de m 
+e um valor(elemento) de m chamado
+mempty e dito um monoid se satifaz as regras abaixo
+1 - Neutro: para qualquer m de x      x <> mempty = x
+                                      mempty <> x = x
+                                     
+2 associatividade 
+(x <> y) <> z = x <> (y <> z)
+
+
+ex: o  tipo, a operação e um elemento neutro
+m = Int
+(<>) = (+)
+mempty = 0
+
+m = Int
+(<>) = (*)
+mempty = 1
+
+m = Bool
+(<>) = ||         ou  &&
+mempty = False    ou  True
+
+
+m = [a]
+(<>) = ++ 
+mempty = []
+
+
+m = a -> a
+(<>) = id
+mempty = .
+
+obs: monoid é um typeclass para kind *.

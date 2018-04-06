@@ -1,0 +1,26 @@
+Teoria das categorias e funtores
+
+
+Categorias --            Eugenia Cheng -- Teoria das categorias
+            |-  Coleção de objetos
+            |-  Coleção de morfismos (funções de A para B)
+            |-  Noção de composição ((.) :: (b -> c) -> (a -> b) -> a -> c)
+            |-  Para cada objeto exite um morfismo
+            |-  Elemento Neutro (para funções)
+            \-  Associatividade
+
+
+categoria Hask(os tipos, morfismos e funções do Hask)
+
+
+Funtor --                                           Renomeia e remapeia, mas n poderia mudar a estrutura
+        |- é um morfismo entre 2 categorias
+        |- Associa valores (A -> B)
+        |- Tem que manter a mesma estrutura
+        |- tudo que acontece em hask fica em hask
+        |- Funtor é um Label para as coisas Ex. Lista []
+        |- é kind * -> * -> Constraint
+        |- Serve para generalizar listas
+        |- pode ser visto como uma caixa
+        |- 
+
