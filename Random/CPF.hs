@@ -1,13 +1,15 @@
 module CPF where
 
 import Data.Char
+data CPF = Mascara String | Numero String deriving Show
 
-data CPF = CPF{
-mascara :: String
-}deriving Show
 
-verifica :: String -> String
-verifica a 
+validarCPF :: CPF -> String
+validarCPF (Mascara x) = verifica(Numero [xs | xs <- x, notElem xs "-."]) 
+
+
+verifica :: CPF -> String
+verifica (Numero a) 
     | (passo1 == fromIntegral(digitToInt(a !! 9))) && (passo2 == fromIntegral(digitToInt(a !! 10)))  = "Valido"
     | ((passo1 == 10) && (fromIntegral(digitToInt(a !! 9)) == 0)) && (passo2 == fromIntegral(digitToInt(a !! 10))) = "Valido"
     | otherwise = "Invalido"
